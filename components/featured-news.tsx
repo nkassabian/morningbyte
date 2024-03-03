@@ -58,7 +58,7 @@ export default function FeaturedNews(){
   return(
     <div className="w-full gap-4 mt-32 flex-wrap flex flex-row">
       {feed.length > 0 && feed.map((article) => (
-        <NewsCard url={article.link} date={article.pubDate} content={article.content} title={article.title} creator={article.creator}/>
+        <NewsCard url={article.link} date={article.pubDate} key={article.guid} content={article.content} title={article.title} creator={article.creator}/>
       ))}
     </div>
   )
